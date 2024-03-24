@@ -36,4 +36,4 @@ IF (SOLOUD_GENERATE_GLUE)
 	include (gen_glue.cmake)
 endif ()
 
-include (InstallExport)
+#include (InstallExport)

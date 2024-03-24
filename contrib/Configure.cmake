@@ -40,3 +40,6 @@ print_option_status (SOLOUD_BACKEND_WASAPI "WASAPI backend")
 
 option (SOLOUD_GENERATE_GLUE "Set to ON for generating the Glue APIs" OFF)
 print_option_status (SOLOUD_GENERATE_GLUE "Generate Glue")
+
+option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
+print_option_status (BUILD_SHARED_LIBS "Install Command Status")

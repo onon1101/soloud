@@ -149,6 +149,8 @@ if (SOLOUD_BACKEND_NULL)
 endif()
 
 if (SOLOUD_BACKEND_SDL2)
+	include(cmake/install_SDL2.cmake)
+
 	find_package (SDL2 REQUIRED)
 	include_directories (${SDL2_INCLUDE_DIR})
 	add_definitions (-DWITH_SDL2_STATIC)

@@ -6,4 +6,4 @@ add_subdirectory(contrib)
 
 add_executable(test main.cc)
 
-target_link_libraries(SoLoud)
+target_link_libraries(soloud)

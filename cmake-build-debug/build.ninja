@@ -47,11 +47,12 @@ cmake_ninja_workdir = /Users/chenshiang/Desktop/soloud-onon1101/cmake-build-debu
 #############################################
 # Order-only phony target for test
 
-build cmake_object_order_depends_target_test: phony || CMakeFiles/test.dir
+build cmake_object_order_depends_target_test: phony || cmake_object_order_depends_target_SDL2-static cmake_object_order_depends_target_soloud
 
 build CMakeFiles/test.dir/main.cc.o: CXX_COMPILER__test_unscanned_Debug /Users/chenshiang/Desktop/soloud-onon1101/main.cc || cmake_object_order_depends_target_test
   DEP_FILE = CMakeFiles/test.dir/main.cc.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/chenshiang/Desktop/soloud-onon1101/cmake-build-debug/_deps/sdl2-build/include -I/Users/chenshiang/Desktop/soloud-onon1101/cmake-build-debug/_deps/sdl2-build/include-config-debug
   OBJECT_DIR = CMakeFiles/test.dir
   OBJECT_FILE_DIR = CMakeFiles/test.dir
 
@@ -63,9 +64,10 @@ build CMakeFiles/test.dir/main.cc.o: CXX_COMPILER__test_unscanned_Debug /Users/c
 #############################################
 # Link the executable test
 
-build test: CXX_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/main.cc.o
+build test: CXX_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/main.cc.o | contrib/libsoloud.a _deps/sdl2-build/libSDL2d.a || _deps/sdl2-build/libSDL2d.a contrib/libsoloud.a
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
   LINK_FLAGS = -L/opt/homebrew/opt/llvm/lib
+  LINK_LIBRARIES = contrib/libsoloud.a  _deps/sdl2-build/libSDL2d.a  -lm  -liconv  -Wl,-framework,CoreVideo  -Wl,-framework,Cocoa  -Wl,-framework,IOKit  -Wl,-framework,ForceFeedback  -Wl,-framework,Carbon  -Wl,-framework,CoreAudio  -Wl,-framework,AudioToolbox  -Wl,-framework,AVFoundation  -Wl,-framework,Foundation  -Wl,-weak_framework,GameController  -Wl,-weak_framework,Metal  -Wl,-weak_framework,QuartzCore  -Wl,-weak_framework,CoreHaptics
   OBJECT_DIR = CMakeFiles/test.dir
   POST_BUILD = :
   PRE_LINK = :

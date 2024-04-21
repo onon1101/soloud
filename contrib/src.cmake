@@ -297,7 +297,6 @@ if (SOLOUD_STATIC)
 endif()
 
 target_include_directories(${TARGET_NAME} PUBLIC ${SDL2_INCLUDE_DIRS})
-message(FATAL_ERROR ${SDL2_INCLUDE_DIRS})
 
 target_link_libraries (${TARGET_NAME} ${LINK_LIBRARIES})
 

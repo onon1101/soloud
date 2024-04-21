@@ -296,6 +296,9 @@ if (SOLOUD_STATIC)
 	add_library(${TARGET_NAME} STATIC ${TARGET_SOURCES})
 endif()
 
+target_include_directories(${TARGET_NAME} PUBLIC ${SDL2_INCLUDE_DIRS})
+message(FATAL_ERROR ${SDL2_INCLUDE_DIRS})
+
 target_link_libraries (${TARGET_NAME} ${LINK_LIBRARIES})
 
 include (Install)

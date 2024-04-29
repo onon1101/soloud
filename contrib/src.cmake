@@ -3,7 +3,7 @@ set (TARGET_NAME soloud)
 set (HEADER_PATH ../include)
 set (SOURCE_PATH ../src)
 
-set (LINK_LIBRARIES SDL2::SDL2main)
+set (LINK_LIBRARIES)
 
 
 # Headers
@@ -298,6 +298,7 @@ if (SOLOUD_STATIC)
 endif()
 
 target_include_directories(${TARGET_NAME} PUBLIC ${SDL2_INCLUDE_DIRS})
+message(STATUS "in soloud sdl2 library: ${SDL2_INCLUDE_DIRS}")
 
 target_link_libraries (${TARGET_NAME} ${LINK_LIBRARIES})
 

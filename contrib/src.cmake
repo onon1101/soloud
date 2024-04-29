@@ -3,7 +3,8 @@ set (TARGET_NAME soloud)
 set (HEADER_PATH ../include)
 set (SOURCE_PATH ../src)
 
-set (LINK_LIBRARIES)
+set (LINK_LIBRARIES SDL2::SDL2main)
+
 
 # Headers
 set (TARGET_HEADERS
